@@ -1,6 +1,10 @@
+// Sarah Mohammed Althobiti / Id : 444004881
+
+import java.util.Random;
+
 public class assignment {
 
-    public static void traversal(int[]A) {
+    public static void traversal(int[] A) {
 
         for (int i = 0; i < A.length; i++) {
             A[i] = (int) Math.pow(A[i], 2);
@@ -24,17 +28,17 @@ public class assignment {
             System.out.println("Array isc empty");
         } else {
 
-           int i = search(A, length, count, key);
+            int i = search(A, length, count, key);
             if (i == -1) {
 
                 System.out.println("Not found");
             } else {
                 for (int j = i; j < count - 1; j++) {
                     A[j] = A[j + 1];
-                    
+
                 }
                 count = count - 1;
-                
+
             }
 
         }
@@ -42,15 +46,15 @@ public class assignment {
 
     public static void InsertUnsorted(int[] A, int count, int size, int key) {
 
-        if (count == size) { 
+        if (count == size) {
             System.out.println("Array is full");
         } else {
 
             A[count] = key;
-           
+
             count = count + 1;
         }
-       print(A, count);
+
     }
 
     public static void InsertSorted(int A[], int count, int size, int key) {
@@ -59,13 +63,13 @@ public class assignment {
         } else {
             for (int i = 0; i < count; i++) {
                 if (key < A[i]) {
-                    for (int j = count ; j < i + 1; j--) {
+                    for (int j = count; j < i + 1; j--) {
                         A[j] = A[j - 1];
-            
+
                     }
                     A[i] = key;
                     count = count + 1;
-                    print(A,count);
+
                 }
             }
         }
@@ -83,21 +87,24 @@ public class assignment {
             }
         }
     }
-    public static void print(int[]A, int count){
-        for(int i =0; i < count; i++){
+
+    public static void print(int[] A, int count) {
+        for (int i = 0; i < count; i++) {
             System.out.println(A[i]);
         }
     }
 
     public static void main(String[] args) {
 
-        int[] myArray = new int[10];
-        myArray[0]= 1;
-        myArray[1]= 2;
-        myArray[2]= 4;
-        InsertSorted(myArray, 3, myArray.length, 3);
-       
-        
+        int[] myArray = new int[100];
+        int count = 10;
+        Random rand = new Random();
+        for (int i = 0; i < count; i++) {
+
+            myArray[i] = rand.nextInt();
+
+        }
+
     }
 
 }
