@@ -4,11 +4,12 @@ import java.util.Random;
 
 public class assignment {
 
-    public static void traversal(int[] A) {
+    public static void traversal(int[] A,int count) {
 
-        for (int i = 0; i < A.length; i++) {
+        for (int i = 0; i < count; i++) {
             A[i] = (int) Math.pow(A[i], 2);
         }
+        print(A, count);
     }
 
     public static int search(int[] A, int size, int count, int key) {
@@ -42,6 +43,7 @@ public class assignment {
             }
 
         }
+        print(A, count);
     }
 
     public static void InsertUnsorted(int[] A, int count, int size, int key) {
@@ -54,6 +56,7 @@ public class assignment {
 
             count = count + 1;
         }
+        print(A, count);
 
     }
 
@@ -73,6 +76,7 @@ public class assignment {
                 }
             }
         }
+        print(A, count);
     }
 
     public static void sort(int[] A, int count) {
@@ -86,25 +90,39 @@ public class assignment {
                 }
             }
         }
+        print(A, count);
     }
 
     public static void print(int[] A, int count) {
         for (int i = 0; i < count; i++) {
             System.out.println(A[i]);
         }
+        System.out.println("*****************************");
     }
 
     public static void main(String[] args) {
 
-        int[] myArray = new int[100];
+     /* int[] myArray = new int[100];
         int count = 10;
         Random rand = new Random();
         for (int i = 0; i < count; i++) {
 
             myArray[i] = rand.nextInt();
+        }*/
 
-        }
-
+        int[] myArray = new int[10];
+        myArray[0]= 1;
+        myArray[1]= 3;
+        myArray[2]= 4;
+        int count = 3;
+        
+       // traversal(myArray, count);
+       // System.out.println(search(myArray, myArray.length, count, 1));
+       // delete(myArray, myArray.length, count, 3);
+       // InsertUnsorted(myArray,count,myArray.length,2);
+          
+       // sort(myArray,count);
     }
+
 
 }
