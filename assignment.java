@@ -66,13 +66,16 @@ public class assignment {
         } else {
             for (int i = 0; i < count; i++) {
                 if (key < A[i]) {
-                    for (int j = count; j < i + 1; j--) {
+                    count++;
+                    for (int j = count ; j > i ; j--) {                   
                         A[j] = A[j - 1];
+                        //A[i] = key;
+                       // count = count + 1;
+
 
                     }
                     A[i] = key;
-                    count = count + 1;
-
+                    break;
                 }
             }
         }
@@ -120,7 +123,7 @@ public class assignment {
        // System.out.println(search(myArray, myArray.length, count, 1));
        // delete(myArray, myArray.length, count, 3);
        // InsertUnsorted(myArray,count,myArray.length,2);
-          
+          InsertSorted(myArray,count,myArray.length, 2);
        // sort(myArray,count);
     }
 
